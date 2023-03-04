@@ -1,0 +1,8 @@
+
+1. 导出数据库db_goods：
+如果需要将数据库从一台计算机复制到另外一台计算机，或者想对数据库进行备份，对于本案例的数据库db_goods可以使用MySQL Workbench的数据导出功能。
+在MySQL Workbench的菜单栏选择“Server”→“Data Export”（数据导出）命令，打开“Administration – Data Export”选项卡，在“Tables to Export”列表中勾选所需导出的数据库db_goods及其数据表，在下拉列表中选中“Dump Structure and Data”（导出结构和数据），选中“Export to self-Contained File”（导出到独立的文件）单选按钮，在单选按钮右边的文本框中输入保存的文件名，如“D:/db_goods.sql”或“D:/db_goods.txt”，勾选“Include Create Schema”（包括创建数据库）复选框，最后单击“Start Export”（开始导出）按钮，就将数据库db_goods中的数据表的结构及其数据都导出到了D:/db_goods.sql或D:/db_goods.txt文件中。
+
+2. 导入数据库db_goods
+如果需要从db_goods.txt导入数据或恢复数据库，只需在MySQL Workbench中新打开一个查询选项卡，复制db_goods.txt中的所有语句到该选项卡中，然后运行这些语句，就会完成数据库db_goods的创建、设为当前数据库、创建表和插入记录等操作。（本案例素材文件夹“data_数据导入导出”中有文件db_goods.txt。）
+也可以在MySQL Workbench的菜单栏选择“Server”→“Data Import”（数据导入）命令，打开“Administration – Data Import”选项卡，在打开的选项卡中选中“Import from self-Contained File”（从独立的文件导入）单选按钮，在单选按钮右边的文本框中输入要导入的文件名，如“D:/db_student.sql”或“D:/db_goods.txt”，或者单击浏览按钮选择要导入的文件，最后单击“Start Import”（开始导入）按钮，就将数据库db_goods导入到了MySQL数据库服务器。

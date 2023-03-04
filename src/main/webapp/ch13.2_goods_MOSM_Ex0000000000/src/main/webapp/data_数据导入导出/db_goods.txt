@@ -1,0 +1,124 @@
+
+CREATE DATABASE  IF NOT EXISTS `db_goods` 
+
+/*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `db_goods`;
+
+-- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+--
+-- Host: localhost    Database: db_goods
+-- ------------------------------------------------------
+-- Server version	8.0.26
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tb_goods`
+--
+
+DROP TABLE IF EXISTS `tb_goods`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_goods` (
+  `goodsId` int NOT NULL AUTO_INCREMENT,
+  `goodsNo` varchar(45) NOT NULL,
+  `goodsName` varchar(45) NOT NULL,
+  `typeId` int NOT NULL DEFAULT '0',
+  `typeName` varchar(45) NOT NULL,
+  `price` float NOT NULL DEFAULT '0',
+  `stock` int NOT NULL DEFAULT '0',
+  `timeSale` datetime DEFAULT NULL,
+  `image` varchar(45) DEFAULT NULL,
+  `detail` varchar(10000) NOT NULL,
+  `timeRenew` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`goodsId`),
+  UNIQUE KEY `goodsNo_UNIQUE` (`goodsNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_goods`
+--
+
+LOCK TABLES `tb_goods` WRITE;
+/*!40000 ALTER TABLE `tb_goods` DISABLE KEYS */;
+INSERT INTO `tb_goods` VALUES (1,'100014453209','HUAWEI P50 原色双影像单元 8GB+256GB 可可茶金色',4,'数码',4658,100,'2021-10-01 08:00:00','1.jpg','<ul class=\"p-parameter-list list-paddingleft-2\" style=\"list-style-type: none;\"><li><p>品牌：&nbsp;<a href=\"https://list.jd.com/list.html?cat=9987,653,655&ev=exbrand_8557\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(94, 105, 173); text-decoration-line: none;\">华为（HUAWEI）</a></p></li><li><p>商品名称：华为P50</p></li><li><p>商品编号：100014453209</p></li><li><p>商品毛重：330.00g</p></li><li><p>商品产地：中国大陆</p></li><li><p>CPU型号：骁龙888 4G</p></li><li><p>运行内存：8GB</p></li><li><p>存储卡：NM存储卡</p></li><li><p>后摄主摄像素：5000万像素</p></li><li><p>前摄主摄像素：1300万像素</p></li><li><p>分辨率：全高清FHD+</p></li><li><p>充电器：其他</p></li><li><p>支持IPv6：支持IPv6</p></li><li><p>系统：HarmonyOS 2</p></li><li><p>机身内存：256GB</p></li></ul>','2022-06-04 07:35:33'),(15,'100007071115','TCL电视机 65T7D',5,'家电家装',4199,200,'2022-05-26 08:00:00','15.jpg','<h3 style=\"white-space: normal; margin: 0px; padding: 0px; font-weight: 400; font-size: 12px; float: left; width: 110px; text-align: right;\">交互设备</h3><ul class=\" list-paddingleft-2\" style=\"margin-left: 110px; width: 586.713px; padding: 0px; white-space: normal;\"><ul class=\"clearfix list-paddingleft-2\" style=\"list-style-type: square;\"><li><p>手势控制</p></li><li><p>不支持</p></li><li><p>语音控制</p></li><li><p>支持</p></li><li><p>语音输入</p></li><li><p>支持</p></li></ul></ul><h3 style=\"white-space: normal; margin: 0px; padding: 0px; font-weight: 400; font-size: 12px; float: left; width: 110px; text-align: right;\">核心参数</h3><ul class=\" list-paddingleft-2\" style=\"margin-left: 110px; width: 586.713px; padding: 0px; white-space: normal;\"><ul class=\"clearfix list-paddingleft-2\" style=\"list-style-type: square;\"><li><p>CPU核数</p></li><li><p>四核心</p></li><li><p>运行内存</p></li><li><p>2GB</p></li><li><p>操作系统</p></li><li><p>安卓系统</p></li><li><p>CPU</p></li><li><p><a href=\"https://item.jd.com/100007071115.html#none\" style=\"margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration-line: none;\"><span class=\"Ptable-sprite-question\" style=\"margin: 0px 0px 0px 4px; padding: 0px; display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background-image: url(&quot;//static.360buyimg.com/item/unite/1.0.101/components/default/detail/i/sprite.png&quot;); background-position: initial; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial;\"></span></a></p></li><li><p>Cortex A55 四核（64位）</p></li><li><p>智能电视</p></li><li><p><a href=\"https://item.jd.com/100007071115.html#none\" style=\"margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration-line: none;\"><span class=\"Ptable-sprite-question\" style=\"margin: 0px 0px 0px 4px; padding: 0px; display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background-image: url(&quot;//static.360buyimg.com/item/unite/1.0.101/components/default/detail/i/sprite.png&quot;); background-position: initial; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial;\"></span></a></p></li><li><p>是</p></li><li><p>GPU</p></li><li><p><a href=\"https://item.jd.com/100007071115.html#none\" style=\"margin: 0px; padding: 0px; color: rgb(102, 102, 102); text-decoration-line: none;\"><span class=\"Ptable-sprite-question\" style=\"margin: 0px 0px 0px 4px; padding: 0px; display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background-image: url(&quot;//static.360buyimg.com/item/unite/1.0.101/components/default/detail/i/sprite.png&quot;); background-position: initial; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial;\"></span></a></p></li><li><p>G31MP 双核</p></li><li><p>存储内存</p></li><li><p>32GB</p></li></ul></ul><h3 style=\"white-space: normal; margin: 0px; padding: 0px; font-weight: 400; font-size: 12px; float: left; width: 110px; text-align: right;\">网络参数</h3><ul class=\" list-paddingleft-2\" style=\"margin-left: 110px; width: 586.713px; padding: 0px; white-space: normal;\"><ul class=\"clearfix list-paddingleft-2\" style=\"list-style-type: square;\"><li><p>连接方式</p></li><li><p>无线/网线</p></li><li><p>网络连接</p></li><li><p>支持有线&amp;无线</p></li></ul></ul>','2022-05-29 13:32:38'),(18,'10008248','西游记原著版（套装上下册）（全两册）',6,'图书',36.6,100,'2022-05-26 22:00:00',NULL,'<p><span style=\"color: rgb(102, 102, 102); font-family: tahoma, arial, &quot;Microsoft YaHei&quot;, &quot;Hiragino Sans GB&quot;, u5b8bu4f53, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);\">&nbsp; &nbsp; 《西游记》主要描写的是孙悟空保唐僧西天取经，历经九九八十一难的故事。唐僧取经是历史上一件真实的事。大约距今一千三百多年前，即唐太宗贞观元年（627），年仅25岁的青年和尚玄奘离开京城长安，只身到天竺（印度）游学。</span></p><p><span style=\"color: rgb(102, 102, 102); font-family: tahoma, arial, &quot;Microsoft YaHei&quot;, &quot;Hiragino Sans GB&quot;, u5b8bu4f53, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);\">&nbsp; &nbsp; 他从长安出发后，途经中亚、阿富汗、巴基斯坦，历尽艰难险阻，到达了印度。他在那里学习了两年多，并在一次大型佛教经学辩论会任主讲，受到了赞誉。贞观十九年（645）玄奘回到了长安，带回佛经657部。他这次西天取经，前后十九年，行程几万里，是一次传奇式的万里长征，轰动一时。后来玄奘口述西行见闻，由弟子辩机辑录成《大唐西域记》十二卷。</span></p><p><span style=\"color: rgb(102, 102, 102); font-family: tahoma, arial, &quot;Microsoft YaHei&quot;, &quot;Hiragino Sans GB&quot;, u5b8bu4f53, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);\">&nbsp; &nbsp; 但这部书主要讲述了路上所见各国的历史、地理及交通，没有什么故事。及到他的弟子慧立、彦琮撰写的《大唐大慈恩寺三藏法师传》，则为玄奘的经历增添了许多神话色彩，从此，唐僧取经的故事便开始在民间广为流传。南宋有《大唐三藏取经诗话》，金代院本有《唐三藏》、《蟠桃会》等，元杂剧有吴昌龄的《唐三藏西天取经》、无名氏的《二郎神锁齐大圣》等，这些都为《西游记》的创作奠定了基础。吴承恩也正是在民间传说和话本、戏曲的基础上，经过艰苦的再创造，完成了这部令中华民族为之骄傲的伟大文学巨著。</span></p><p style=\"text-align: center;\"><img src=\"http://img.baidu.com/hi/jx2/j_0083.gif\"/></p>','2022-05-29 16:07:30'),(19,'100012043978','茅台 飞天 酱香型白酒 53度 500ml',9,'食品酒饮',1499,20,'2022-05-26 08:00:00','19.jpg','<h3 style=\"margin: 0px; padding: 0px; font-weight: 400; font-size: 12px; float: left; width: 110px; text-align: right;\">主体</h3><ul style=\"margin: 0px 0px 0px 110px; padding: 0px;\" class=\" list-paddingleft-2\"><ul class=\"clearfix list-paddingleft-2\" style=\"list-style-type: square;\"><li><p>酒精度</p></li><li><p>53%vol</p></li></ul></ul><h3 style=\"margin: 0px; padding: 0px; font-weight: 400; font-size: 12px; float: left; width: 110px; text-align: right;\">规格参数</h3><ul style=\"margin: 0px 0px 0px 110px; padding: 0px;\" class=\" list-paddingleft-2\"><ul class=\"clearfix list-paddingleft-2\" style=\"list-style-type: square;\"><li><p>容量</p></li><li><p>500ml</p></li><li><p>产品重量</p></li><li><p>870g</p></li></ul></ul><h3 style=\"margin: 0px; padding: 0px; font-weight: 400; font-size: 12px; float: left; width: 130px; text-align: right;\">包装清单</h3><p style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 155px; padding: 0px 50px 0px 0px;\">53°500ml飞天茅台酒*1</p>','2022-05-29 15:52:24'),(24,'100018871627','安踏氢跑4.0丨氢科技专业跑步鞋男轻便运动鞋 象牙白/精灵黄/神秘紫',8,'运动',349,200,'2022-05-26 08:00:00','24.jpg','<ul class=\"p-parameter-list list-paddingleft-2\" style=\"list-style-type: none;\"><li><p>品牌：&nbsp;<a href=\"https://list.jd.com/list.html?cat=1318,12099,9756&ev=exbrand_3552\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(94, 105, 173); text-decoration-line: none;\">安踏（ANTA）</a></p></li><li><p>商品名称：安踏112225541</p></li><li><p>商品编号：100018871627</p></li><li><p>商品毛重：0.625kg</p></li><li><p>商品产地：中国大陆</p></li><li><p>货号：112225541-2</p></li><li><p>类别：入门跑鞋，稳定跑鞋，缓冲跑鞋</p></li><li><p>功能科技：强化避震缓冲</p></li><li><p>适用季节：夏季，四季通用</p></li><li><p>功能：透气，轻便，支撑</p></li><li><p>适用性别：男</p></li><li><p>鞋底材质：EVA</p></li><li><p>运动系列：跑步Air Max</p></li><li><p>适用场地：地板，跑道，小道</p></li><li><p>闭合方式：系带</p></li><li><p>颜色：白色，绿色，蓝色</p></li></ul>','2022-06-04 07:21:27'),(25,'100037955106','李宁速干T恤 男运动短袖 黑色-XL',3,'服装',298,120,'2022-05-26 08:00:00','25.jpg','<p style=\"text-align: center;\">\n  <img src=\"http://img30.360buyimg.com/sku/jfs/t1/216089/40/13658/261031/621dbafbEeab85890/3c13417e3210b190.jpg\" width=\"594\"/> &nbsp;<img src=\"http://img30.360buyimg.com/sku/jfs/t1/77104/33/18723/120114/62691f8fEced15a2b/1ed42c8580161c57.jpg\" width=\"594\"/>\n</p>','2022-05-31 15:09:15'),(28,'1','1-测试用',8,'运动',8,8,'2013-08-18 01:00:00','','<p>11</p><p>222</p><p><img src=\"http://img.baidu.com/hi/jx2/j_0017.gif\"/><img src=\"http://img.baidu.com/hi/jx2/j_0028.gif\"/></p><p>&nbsp;</p>','2022-06-04 07:36:51'),(31,'100018751171','联想(Lenovo)天逸510S台式机 12代i3 8G 1T',4,'数码',3399,6,'2022-05-26 08:00:00','31.jpg','<p style=\"text-align: center;\"><span style=\"color: rgb(102, 102, 102); font-family: Arial, &quot;microsoft yahei&quot;; font-weight: 700; background-color: rgb(255, 255, 255);\">联想(Lenovo)天逸510S个人商务台式机电脑整机</span></p><p style=\"text-align: center;\"><span style=\"color: rgb(102, 102, 102); font-family: Arial, &quot;microsoft yahei&quot;; font-weight: 700; background-color: rgb(255, 255, 255);\">(12代i3-12100 8G 1T+256G SSD wifi6 win11)23英寸显示器</span></p><p style=\"text-align: center;\"><img src=\"http://img30.360buyimg.com/sku/jfs/t1/162126/4/23700/206951/620b4ea7E02d913d1/4918c3744be69f4c.jpg\" width=\"394\"/></p>','2022-05-29 13:31:43'),(55,'100','2-测试用：深圳职业技术学院留仙洞校区校园风光（溪湖晨光）',6,'图书',1,1,'2022-05-26 08:00:00','55.jpg','<p style=\"text-align: center;\"><span style=\"font-size: medium; font-family: &quot;Microsoft YaHei&quot;;\">在商品<strong>简介</strong>中，</span><span style=\"font-size: medium; font-family: &quot;Microsoft YaHei&quot;;\">可以输入</span><strong style=\"font-size: medium; font-family: &quot;Microsoft YaHei&quot;;\">文字，</strong><span style=\"font-size: medium; font-family: &quot;Microsoft YaHei&quot;;\">也可以引入</span><strong style=\"font-size: medium; font-family: &quot;Microsoft YaHei&quot;;\">图片</strong><br/></p><p style=\"font-family: &quot;Microsoft YaHei&quot;; font-size: medium; white-space: normal; text-align: center;\"><img src=\"https://www.szpt.edu.cn/images/logo.png\"/></p><p style=\"text-align: center;\"><a href=\"https://www.szpt.edu.cn/\" target=\"_self\">深圳职业技术学院官网</a><br/></p>','2022-06-04 07:10:26');
+/*!40000 ALTER TABLE `tb_goods` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_type`
+--
+
+DROP TABLE IF EXISTS `tb_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_type` (
+  `typeId` int NOT NULL AUTO_INCREMENT,
+  `typeName` varchar(45) NOT NULL,
+  `note` varchar(2000) DEFAULT NULL,
+  `timeRenew` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`typeId`),
+  UNIQUE KEY `typeName_UNIQUE` (`typeName`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_type`
+--
+
+LOCK TABLES `tb_type` WRITE;
+/*!40000 ALTER TABLE `tb_type` DISABLE KEYS */;
+INSERT INTO `tb_type` VALUES (3,'服装',' ','2019-06-14 10:07:59'),(4,'数码',' ','2019-05-28 22:01:27'),(5,'家电家装','家用电器\n居家装修','2020-07-19 22:03:27'),(6,'图书','多阅读','2021-02-15 21:07:40'),(8,'运动',' ','2019-05-26 16:25:46'),(9,'食品酒饮',' ','2019-05-28 21:59:49'),(10,'玩具乐器',' ','2019-06-13 19:48:34');
+/*!40000 ALTER TABLE `tb_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_user`
+--
+
+DROP TABLE IF EXISTS `tb_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_user` (
+  `userId` int NOT NULL AUTO_INCREMENT,
+  `userName` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `realName` varchar(45) NOT NULL,
+  `role` varchar(5) NOT NULL,
+  `timeRenew` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`userId`),
+  UNIQUE KEY `userName_UNIQUE` (`userName`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_user`
+--
+
+LOCK TABLES `tb_user` WRITE;
+/*!40000 ALTER TABLE `tb_user` DISABLE KEYS */;
+INSERT INTO `tb_user` VALUES (3,'tom','AC338530711CC8759398D0E5BB050283','汤姆','user','2021-02-17 06:24:19'),(7,'cc','1964DA902CD36A04DF8CEBD07196503E','CC网','user','2022-06-04 07:34:02'),(16,'1','A522D4F20C1105336AD0D09D2721F86E','1 - guest用户','guest','2022-06-04 07:33:30'),(17,'zhangsan','7F3E096131569A77E3D63EEE4B79DD30','张三','admin','2021-02-19 10:16:35');
+/*!40000 ALTER TABLE `tb_user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-06-04  7:45:25
